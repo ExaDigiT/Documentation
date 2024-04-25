@@ -1,4 +1,4 @@
-ExaDigiT/RAPS Documentation
+RAPS Documentation
 ===========================
 
 This section covers documentation for the ExaDigiT/RAPS project. 

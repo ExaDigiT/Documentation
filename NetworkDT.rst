@@ -1,4 +1,4 @@
-ExaDigiT/NetworkDT Documentation
+NetworkDT Documentation
 ================================
 
 This section covers documentation for the ExaDigiT/NetworkDT project. 

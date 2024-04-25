@@ -1,4 +1,4 @@
-ExaDigiT/coolingModel Documentation
+CoolingModel Documentation
 ===================================
 
 This section covers documentation for the ExaDigiT/coolingModel project. 
