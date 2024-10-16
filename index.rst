@@ -3,6 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+
+.. figure:: ExaDigiTUE5/pictures/FrontierDigitalTwin.JPG
+   :align: center
+   :width: 50%
+   :alt: Frontier digital twin view
+
+   
 ExaDigiT documentation
 ====================================
 
@@ -12,17 +19,17 @@ It combines telemetry and simulations, providing a virtual representation of phy
 ExaDigiT is built on an open software stack (Modelica, SST Macro, Unreal Engine) with an aim to foster community-driven development, we have formed a partnership with national supercomputer centers (ORNL, LLNL, LANL (USA), PAWSEY (Australia), LUMI (Finland), CINES/GENCI (France) , CINECA (Italy), ...) around the world to develop an open framework for modeling supercomputers.
 
 ExaDigiT uses four primary components:
+---------------------------------------
 
     - RAPS: resource allocator and power simulator to model workloads, energy usage, and energy conversion losses.
-    - Modelica FMU (AutoCSM https://code.ornl.gov/exadigit/AutoCSM, LBNL https://github.com/lbl-srg/modelica-buildingsL, TRANSFORM https://github.com/ORNL-Modelica/TRANSFORM-Library) transient thermo-fluid simulation to model the cooling system from the cooling tower to the cold plate.
-    - A network digital twin to simulate network power and congestion.
-    - ExaDigiTUE5: A visual analytics module using Unreal Engine 5 for augmented reality and a web-based dashboard for experiments.
-    
 
-.. figure:: ExaDigiTUE5/pictures/FrontierDigitalTwin.JPG
-   :align: center
-   :width: 50%
-   :alt: Frontier digital twin view
+    - Modelica FMU (AutoCSM https://code.ornl.gov/exadigit/AutoCSM, LBNL https://github.com/lbl-srg/modelica-buildingsL, TRANSFORM https://github.com/ORNL-Modelica/TRANSFORM-Library) transient thermo-fluid simulation to model the cooling system from the cooling tower to the cold plate.
+
+    - A network digital twin to simulate network power and congestion.
+
+    - ExaDigiTUE5: A visual analytics module using Unreal Engine 5 for augmented reality and a web-based dashboard for experiments.
+
+    
          
 
 .. toctree::
