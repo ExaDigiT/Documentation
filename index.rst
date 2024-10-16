@@ -7,7 +7,7 @@ ExaDigiT documentation
 ====================================
 
 ExaDigiT is a digital twin of supercomputers and their thermal infrastructures. It offers insights into operational strategies, "what-if" scenarios, as well as elucidates complex, cross-disciplinary transient behaviors. It also serves as a design tool for future system prototyping.
-It combines telemetry and simulations, providing a virtual representation of physical systems. It supports planning, construction, and operations, offering value in decision-making, predictive maintenance, and system efficiency. In design stages, digital twins can evaluate energy efficiency, virtually prototype cooling systems, and model network performance. During operations, they aid in predictive maintenance and operational optimization.
+It combines telemetry and simulations, providing a virtual representation of physical systems. It supports planning, construction, and operations, offering value in decision-making, predictive maintenance, and system efficiency. In design stages, it can evaluate energy efficiency, virtually prototype cooling systems, and model network performance. During operations, ExaDigiT aids in predictive maintenance and operational optimization.
 
 ExaDigiT is built on an open software stack (Modelica, SST Macro, Unreal Engine) with an aim to foster community-driven development, we have formed a partnership with national supercomputer centers (ORNL, LLNL, LANL (USA), PAWSEY (Australia), LUMI (Finland), CINES/GENCI (France) , CINECA (Italy), ...) around the world to develop an open framework for modeling supercomputers.
 
