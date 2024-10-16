@@ -1,7 +1,7 @@
 ExaDigiTUE5 Documentation
 ================================
 
-ExaDigiTUE5 is provides the AR/VR interface to ORNL's exascale digital twin.
+ExaDigiTUE5 provides the AR/VR interface to ORNL's exascale digital twin.
 The main functionality is implemented using Unreal Engine 5.1 for Desktop or
 Microsoft Hololens2 based visualization and interation with the system.
 The digital twin provides data ingestion from telemetry, as well as triggering
@@ -25,7 +25,14 @@ For UEFMI, which is a plugin to the project follow the installation guide at
 https://github.com/ORNL-Modelica/UnrealEngine-FMIPlugin
 Especially its contained submodules and fmikit setup! (See README.md#Installation of the project.)
 
+Visualisation
+-------------
 
+.. figure:: ExaDigiTUE5/pictures/ExadigitUE5-Frontier-VR1.JPG
+   :align: center
+   :width: 50%
+   :alt: Frontier VR view with ExaDigiTUE5
+         
 Contributors
 ------------
 
