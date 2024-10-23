@@ -30,13 +30,13 @@ Command line flags
   :language: shell
 
 
-Raps input data format
+RAPS python input data format
 ----------
 
-Raps requires a certain amount of data on a series of jobs in order to function.  
+RAPS requires a certain amount of data on a series of jobs in order to function.  
 
 
-This requires a list of jobs, where each job has the following information (as a job_dict structure descrived below):
+This requires a list of jobs, where each job has the following information (as a job_dict structure described below):
 
 - **Number of nodes** : used by the job (integer)
 - **Name** : job name (string)
@@ -51,7 +51,7 @@ This requires a list of jobs, where each job has the following information (as a
 
 To read data from your cluster in Raps, you need to declare your cluster and associate a dataloader with it. Dataloader will format the data from your cluster in raps format.
 
-The power utilization is computed from the **cpu_trace** and **gpu_trace** and each value in the trace is a percentage between 0 and N_CPUs / 0 and N_GPUs receptively.
+The power utilization is computed from the **cpu_trace** and **gpu_trace** and each value in the trace is a percentage between 0 and N_CPUs / 0 and N_GPUs respectively.
 
 If the trace (CPU and GPU) provides a single value, constant utilization is assumed for the duration of the job.
 
