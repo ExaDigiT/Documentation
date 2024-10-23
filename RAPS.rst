@@ -1,4 +1,4 @@
-Resource Allocator and Power Simulator (RAPS) documentation
+Resource Allocator and Power Simulator (RAPS)
 ===========================================================
 
 RAPS is one of the modules used by the ExaDigiT framework.

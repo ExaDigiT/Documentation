@@ -1,4 +1,4 @@
-ExaDigiTUE5 Documentation
+ExaDigiTUE5 
 ================================
 
 ExaDigiTUE5 provides the AR/VR interface to ORNL's exascale digital twin.
