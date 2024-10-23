@@ -23,7 +23,7 @@ ExaDigiT uses four primary components:
 
     - **RAPS**: Resource Allocator and Power Simulator (https://code.ornl.gov/exadigit/raps) to model workloads, energy usage, and energy conversion losses.
 
-    - **Modelica FMU** (AutoCSM https://code.ornl.gov/exadigit/AutoCSM, LBNL https://github.com/lbl-srg/modelica-buildingsL, TRANSFORM https://github.com/ORNL-Modelica/TRANSFORM-Library) transient thermo-fluid simulation to model the cooling system from the cooling tower to the cold plate.
+    - **Cooling Model with Modelica FMU** (AutoCSM https://code.ornl.gov/exadigit/AutoCSM, LBNL https://github.com/lbl-srg/modelica-buildingsL, TRANSFORM https://github.com/ORNL-Modelica/TRANSFORM-Library) transient thermo-fluid simulation to model the cooling system from the cooling tower to the cold plate.
 
     - A network digital twin to simulate network power and congestion.
 
@@ -32,7 +32,7 @@ ExaDigiT uses four primary components:
     
          
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :hidden:
 
    RAPS
