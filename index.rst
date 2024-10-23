@@ -18,8 +18,21 @@ It combines telemetry and simulations, providing a virtual representation of phy
 
 ExaDigiT is built on an open software stack (Modelica, SST Macro, Unreal Engine) with an aim to foster community-driven development, we have formed a partnership with national supercomputer centers (ORNL, LLNL, LANL (USA), PAWSEY (Australia), LUMI (Finland), CINES (France) , CINECA (Italy), ...) around the world to develop an open framework for modeling supercomputers.
 
+ExaDigiT architecture overview:
+---------------------------------------
+
+.. figure:: ExaDigiTUE5/pictures/ExadigitComponents.JPG
+   :align: center
+   :width: 100%
+   :alt: ExaDigiT components and their interactions
+
+
+
+
+         
 ExaDigiT uses four primary components:
 ---------------------------------------
+
 
     - **RAPS**: Resource Allocator and Power Simulator (https://code.ornl.gov/exadigit/raps) to model workloads, energy usage, and energy conversion losses.
 
@@ -29,7 +42,24 @@ ExaDigiT uses four primary components:
 
     - **ExaDigiTUE5**: A visual analytics module (https://code.ornl.gov/exadigit/exadigitue5) using Unreal Engine 5 for augmented reality and a web-based dashboard for experiments.
 
-    
+
+
+The schema above shows the architectural overview of the various components of ExaDigiT. There are three main modules that
+we develop:  RAPS,  a cooling model, and  visual
+analytics capabilities. The RAPS module can replay workloads
+from telemetry, reschedule them, or simulate synthetic work-
+loads on the supercomputer to analyze the resulting energy
+consumption; further details are provided in Section III-B. The
+cooling model simulates thermo-fluid dynamics and control
+of the Central Energy Plant (CEP), which itself includes
+three components:  a thermo-fluid model for predicting
+temperatures (T ), pressures (Π), and flow rates (Q);  a
+control system model for predicting the staging of cooling
+towers, hot/cold water pumps, and heat exchangers; and 
+a sub-module for predicting the system PUE. Both RAPS and
+the cooling model can be interfaced either via a terminal
+console, the web-based dashboard, or the ExadigitUE5 augmented reality
+environment for visual insights.
          
 .. toctree::
    :maxdepth: 1
