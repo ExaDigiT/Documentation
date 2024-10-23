@@ -33,9 +33,8 @@ Command line flags
   
 
 
-.. _RAPS_developpers:
 
 Developpers
-***********
+-----------
 
 Brewer Wesley, Maiterth Mathias, Bouknight Sedrick, Hines Jesse, Webb Tyler
