@@ -30,8 +30,40 @@ Command line flags
   :language: shell
 
 
+
+RAPS describing your supercomputer
+-----------------------------------
+
+.. figure:: raps/pictures/RAPSexplodedView.JPG
+   :align: center
+   :width: 100%
+   :alt: Exploded view of a naive supercomputer
+
+   
+
+In the config directory create a system.json file.
+Here from the exploded view of a naive supercomputer, we have:
+
+- 1 CDU pump cooling 2 racks
+- 1 PDU rectifier per rack
+- 3 chassis per rack
+- 2 switches per chassis
+- 2 PSU rectifier per chassis
+- 12 nodes per rack
+- 2 nodes per blade
+- 2 nodes per PSU rectifier
+- 1 CPU per node
+- 2 GPU per node
+- 1 High Speed NiC per node
+- not written but 1 Disk/NVME per node is supposed
+
+  
+That corresponds to:
+ .. literalinclude:: raps/system.json
+  :language: shell
+  
 RAPS python input data format
-----------
+----------------------------------
 
 RAPS requires a certain amount of data on a series of jobs in order to function.  
 
