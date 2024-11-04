@@ -119,10 +119,10 @@ Description of fields
 - POWER_COST: number of US Dollars per KW.h consumed
 
 
-Racks and their content
+Jobs and their contents
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Here is an example of a file  raps/config/<mysupercomputer>/power.json for the Frontier supercomputer:
+Here is an example of a file  raps/config/<mysupercomputer>/scheduler.json for the Frontier supercomputer:
 
  .. literalinclude:: raps/scheduler.json
   :language: shell
