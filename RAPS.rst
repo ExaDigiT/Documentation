@@ -109,7 +109,7 @@ Description of fields
 - POWER_NIC: average number of Watts consumed by one high speed network card in each node
 - POWER_NVME: average number of Watts consumed by all the disks/NVME in each node
 - POWER_SWITCH: average number of Watts consumed by one high speed network switch in each chassis
-- POWER_CDU: average number of Watts consumed by one CDU in each chassis
+- POWER_CDU: average number of Watts consumed by one CDU in each line of racks
 - POWER_UPDATE_FREQ: number of seconds between each Watt sample
 - RECTIFIER_PEAK_THRESHOLD: number Watts where the current rectifier has its peak of efficiency
 - SIVOC_LOSS_CONSTANT: number of Watts lost
