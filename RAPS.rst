@@ -31,8 +31,14 @@ Command line flags
 
 
 
-RAPS describing your supercomputer
+Describing your supercomputer
 -----------------------------------
+
+Three files are mandatory for describing your supercomputer in the raps/config/<mysupercomputer> directory. The file system.json describing the hardware layout, the file power.json describing the power characteristics and the file scheduler.json describing the computing jobs.
+
+
+Racks and their content
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: raps/pictures/RAPSexplodedView.JPG
    :align: center
@@ -41,7 +47,7 @@ RAPS describing your supercomputer
 
    
 
-In the config directory create a system.json file.
+In the raps/config/<mysupercomputer>/ directory create a system.json file.
 Here from the exploded view of a naive supercomputer, we have:
 
 - 1 CDU pump cooling 2 racks
@@ -58,9 +64,90 @@ Here from the exploded view of a naive supercomputer, we have:
 - not written but 1 Disk/NVME per node is supposed
 
   
-That corresponds to:
+That corresponds to a file  raps/config/<mysupercomputer>/system.json containing:
  .. literalinclude:: raps/system.json
   :language: shell
+
+
+Here are the descriptions of each field:
+
+- NUM_CDUS: total number of pumps
+- RACKS_PER_CDU: number of racks managed by one pump
+- RECTIFIERS_PER_RACK: number of PDU rectifier per rack
+- CHASSIS_PER_RACK: number of chassis/enclosures in each rack
+- SWITCHES_PER_CHASSIS: number of high speed network switches
+- RECTIFIERS_PER_CHASSIS: number of PSU per chassis
+- NODES_PER_RACK: total number of nodes in each rack
+- NODES_PER_BLADE: number of nodes in each blade
+- NODES_PER_RECTIFIER: number of nodes managed by each PSU
+- CPUS_PER_NODE: number of socket/CPU in each node
+- GPUS_PER_NODE: number of GPU in each node
+- NICS_PER_NODE: number of high speed network cards in each node 
+- MISSING_RACKS: List of numbers indicating which rack is missing
+- DOWN_NODES: List of numbers indicating which node is down
+- CPU_PEAK_FLOPS: Floating value indicating the peak Flops of each CPU
+- GPU_PEAK_FLOPS: Floating value indicating the peak Flops of each GPU
+- CPU_FP_RATIO: Floating value between 0 and 1, used to linearly decrease the peak CPU Flops according to the number of Watts consumed
+- GPU_FP_RATIO: Floating value between 0 and 1, used to linearly decrease the peak GPU Flops according to the number of Watts consumed
+
+
+Racks and their powering
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  
+Here is an example of a file  raps/config/<mysupercomputer>/power.json for the Frontier supercomputer:
+
+ .. literalinclude:: raps/power.json
+  :language: shell
+
+Description of fields
+             
+- POWER_GPU_IDLE: number of watts consumed by a GPU when idle
+- POWER_GPU_MAX: number of watts consumed by a GPU when reaching its peak Flops/s
+- POWER_CPU_IDLE: number of Watts consumed by a GPU when idle
+- POWER_CPU_MAX: number of Watts consumed by a CPU when reaching its peak Flops/s
+- POWER_MEM: average number of Watts consumed by all the memory of all the CPU in a node
+- POWER_NIC: average number of Watts consumed by one high speed network card in each node
+- POWER_NVME: average number of Watts consumed by all the disks/NVME in each node
+- POWER_SWITCH: average number of Watts consumed by one high speed network switch in each chassis
+- POWER_CDU: average number of Watts consumed by one CDU in each chassis
+- POWER_UPDATE_FREQ: number of seconds between each Watt sample
+- RECTIFIER_PEAK_THRESHOLD: number Watts where the current rectifier has its peak of efficiency
+- SIVOC_LOSS_CONSTANT: number of Watts lost
+- SIVOC_EFFICIENCY: value between 0 and 1 indicating the efficiency
+- RECTIFIER_LOSS_CONSTANT: number of Watts lost
+- RECTIFIER_EFFICIENCY: value between 0 and 1 indicating the efficiency
+- POWER_COST: number of US Dollars per KW.h consumed
+
+
+Racks and their content
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Here is an example of a file  raps/config/<mysupercomputer>/power.json for the Frontier supercomputer:
+
+ .. literalinclude:: raps/scheduler.json
+  :language: shell
+
+Description of fields:
+             
+- SEED: integer used to initialize the random number generator
+- JOB_ARRIVAL_TIME: offset in number of seconds to calculate the arrival time of the next randomly generated job
+- MTBF: Mean Time Before Failure of a node
+- MAX_TIME:  Maximum  physical time (in seconds) simulated 
+- TRACE_QUANTA: number of second between each energy sampling
+- MIN_WALL_TIME: number of seconds of the smallest possible job randomly generated
+- MAX_WALL_TIME: number of seconds of the biggest possible job randomly generated
+- UI_UPDATE_FREQ: Physcal time (in seconds) simulated between each User Interface update
+- MAX_NODES_PER_JOB: number of nodes of the biggest jobs
+- JOB_END_PROBS: Probability of different ending states for randomly generated jobs (their sum should be equal to 1)
+     - COMPLETED: probability between 0 and 1 that this state occurs
+     - FAILED": probability between 0 and 1 that this state occurs
+     - CANCELLED: probability between 0 and 1 that this state occurs
+     - TIMEOUT: probability between 0 and 1 that this state occurs
+     - NODE_FAIL: probability between 0 and 1 that this state occurs
+
+
+
+
   
 RAPS python input data format
 ----------------------------------
