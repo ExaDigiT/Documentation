@@ -31,20 +31,22 @@ Installation
 Quickstart
 ----------
 
-  - Recommended Dymola Flags (Note these are automatically set via AutoCSM)
-  - Copy paste to Dymola command line for performance improvement in editor
-  ```
+- Recommended Dymola Flags (Note these are automatically set via AutoCSM)
+- Copy paste to Dymola command line for performance improvement in editor
+
+.. code-block:: console
+
   Advanced.Define.GlobalOptimizations = 2;
   Advanced.Translation.SparseActivate = true;
   Advanced.Translation.SparseActivateIntegrator = true;
   Advanced.Translation.SparseActivateSystems = true;
   Advanced.Translation.ODEJacobianForDiscrete = true;
-  ```
+
   
-  - Open Dymola
-  - On the `Simulation` tab, run the script `setup.mos` or load the libraries manually
-  - Export the FMU: python run_auto_csm.py
-  - Run the FMU: python run_fmu.py
+- Open Dymola
+- On the `Simulation` tab, run the script `setup.mos` or load the libraries manually
+- Export the FMU: python run_auto_csm.py
+- Run the FMU: python run_fmu.py
 
 
 Contributors

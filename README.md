@@ -7,4 +7,4 @@ pip install -r requirements.txt
 make html
 
 ## Open in browser
-open _build/html/index.html
+open build/html/index.html
