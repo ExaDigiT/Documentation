@@ -4,7 +4,8 @@
 pip install -r requirements.txt
 
 ## Build documentation
+cd source
 make html
 
 ## Open in browser
-open build/html/index.html
+open source/build/html/index.html
