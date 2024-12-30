@@ -152,7 +152,7 @@ Your dataloader in python
 
 Create in the directory dataloader a python source file whose name should match your supercomputer/system name.
 This python source file must contain at least the definition of a load_data() function that will be called thanks to the Telemetry python module. The first arg is a list of paths to your files specified on command line. Those files contains data related to your supercomputer jobs and infrastructure that you will parse.
-Thanks to those data your load_data() function will fill and then return a python list of dictionnaries. Each one of those dictionnaies should be created for each one of your jobs  by calling job_dict() from the python job module.
+Thanks to those data your load_data() function will fill and then return a python list of dictionnaries. Each one of those dictionnaries should be created for each one of your jobs  by calling job_dict() from the python job module.
 
 
 Supposing that your data are using the parquet file format
@@ -175,7 +175,11 @@ Supposing that your data are using the parquet file format
 
       nodes_required = myjobs_info.loc[job_idx, 'my_label_for_nodelist']
       name = myjobs_info.loc[job_idx, 'my_label_for_jobname']
-   
+      cpu_trace = ...
+      gpu_trace = ...
+      wall_time = ...
+      ...
+      
       job_info = job_dict(nodes_required,
                           name,
                           cpu_trace,
