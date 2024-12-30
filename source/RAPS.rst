@@ -147,7 +147,50 @@ Description of fields:
 
 
 
+Your dataloader in python 
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Create in the directory dataloader a python source file whose name should match your supercomputer/system name.
+This python source file must contain at least the definition of a load_data() function that will be called thanks to the Telemetry python module. The first arg is a list of paths to your files specified on command line. Those files contains data related to your supercomputer jobs and infrastructure that you will parse.
+Thanks to those data your load_data() function will fill and then return a python list of dictionnaries. Each one of those dictionnaies should be created for each one of your jobs  by calling job_dict() from the python job module.
+
+
+Supposing that your data are using the parquet file format
+.. highlight:: python
+.. code-block:: python
+   import numpy as np
+   import pandas as pd
+   from ..job import job_dict             
+
+   def load_data(mydata_paths, **kwargs):
+   
+   myjobs_info = pd.read_parquet(mydata_paths[0])
+   myjobs_total_number = len(myjobs_info)
+
+   list_of_jobinfo = []
+   
+   for job_idx in range(myjobs_total_number -1):
+
+      nodes_required = myjobs_info.loc[job_idx, 'my_label_for_nodelist']
+      name = myjobs_info.loc[job_idx, 'my_label_for_jobname']
+   
+      job_info = job_dict(nodes_required,
+                          name,
+                          cpu_trace,
+                          gpu_trace,
+                          [],
+                          [],
+                          wall_time,
+                          end_state,
+                          requested_nodes,
+                          submit_time,
+                          id,
+                          priority)
+
+      list_of_jobinfo.append(job_info)
+
+   return list_of_jobinfo
+   
   
 RAPS python input data format
 ----------------------------------
@@ -157,15 +200,17 @@ RAPS requires a certain amount of data on a series of jobs in order to function.
 
 This requires a list of jobs, where each job has the following information (as a job_dict structure described below):
 
-- **Number of nodes** : used by the job (integer)
-- **Name** : job name (string)
-- **Cpu_trace** : either a trace in the granularity of a trace quanta, or a single value , either in the range [0,N_CPUs]
-- **Gpu_trace**  : same as cpu_trace, either a list/np.ndarray of floats or a single float, either in the range  [0,N_GPUs]
-- **Wall_time** : job duration in seconds (integer)
-- **State** : completion state at the end of the job (String)
-- **Scheduled_nodes** : list of nodes assigned to the job or None (by node index) (String)
-- **Time_offset** : the submit time, or when the job enters the queue
-- **job_id** :  (integer or string)
+- **nodes_required** : used by the job (integer)
+- **name** : job name (string)
+- **cpu_trace** : either a trace in the granularity of a trace quanta, or a single value , either in the range [0,N_CPUs]
+- **gpu_trace**  : same as cpu_trace, either a list/np.ndarray of floats or a single float, either in the range  [0,N_GPUs]
+- **ntx_trace** : optional network trace
+- **nrx_trace** : optional network trace
+- **wall_time** : job duration in seconds (integer)
+- **end_state** : completion state at the end of the job (String)
+- **requested_nodes** : list of nodes assigned to the job or None (by node index) (String)
+- **submit_time** : the submit time, or when the job enters the queue
+- **id** :  job id (integer or string)
 - **priority** : priority of the job (integer)
 
 To read data from your cluster in Raps, you need to declare your cluster and associate a dataloader with it. Dataloader will format the data from your cluster in raps format.
