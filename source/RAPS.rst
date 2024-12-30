@@ -156,8 +156,10 @@ Thanks to those data your load_data() function will fill and then return a pytho
 
 
 Supposing that your data are using the parquet file format
+
 .. highlight:: python
 .. code-block:: python
+
    import numpy as np
    import pandas as pd
    from ..job import job_dict             
