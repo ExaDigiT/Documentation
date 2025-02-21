@@ -201,6 +201,16 @@ Everything but CPU and GPU is considered constant at the moment.
        }
 
 
+Resampling telemetry Joules data of compute nodes
+--------------------------------------------------
+
+Here we consider that we have the number of Joules irregulary sampled in a CSV infile for one compute node.
+The following example takes care of resets on CRAY pm counters and creates a CSV outfile regulary sampled every 20 seconds with EPOCH timestamps.
+
+.. literalinclude:: resample_JoulestoWatts.py
+  :language: python
+
+
 Developpers
 -----------
 
