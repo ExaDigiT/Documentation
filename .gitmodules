@@ -1,0 +1,4 @@
+[submodule "source/raps"]
+	path = source/raps
+	url = https://code.ornl.gov/exadigit/raps
+	branch = 75-prepare-a-directory-named-doc-being-a-submodule-for-the-github-used-by-readthedoc
