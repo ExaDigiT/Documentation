@@ -62,10 +62,11 @@ console, the web-based dashboard, or the ExadigitUE5 augmented reality
 environment for visual insights.
          
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+   :caption: Contents:
    :hidden:
 
-   RAPS
+   raps/Doc/RAPS
    coolingModel
    NetworkDT
    ExaDigiTUE5
