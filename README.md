@@ -1,6 +1,6 @@
-# exadigit: the exascale digital twin framework
+# ExaDigiT: the exascale digital twin framework
 
-exadigit is an open, modular ecosystem for modeling, simulating, and visualizing large-scale supercomputing facilities.
+ExaDigiT is an open, modular ecosystem for modeling, simulating, and visualizing large-scale supercomputing facilities.
 
 ---
 
