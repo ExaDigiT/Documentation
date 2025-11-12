@@ -1,46 +1,46 @@
-# ExaDigiT: The Exascale Digital Twin Framework
+# exadigit: the exascale digital twin framework
 
-ExaDigiT is an open, modular ecosystem for modeling, simulating, and visualizing large-scale supercomputing facilities.
-
----
-
-## Structure
-
-### 🧊 Cooling
-Modelica-based and CSM-driven models for facility-level thermal management.
-- [cooling-autocsm](../AutoCSM)
-- [cooling-frontier](../datacenterCoolingModel)
-- [cooling-power9-csm](../POWER9CSM)
-- [cooling-fmu-library](../fmu-models)
-- [cooling-summit-archive](../summitcoolingmodel)
-
-### ⚙️ Simulation
-RAPS-based workload and power modeling tools.
-- [sim-raps](../raps)
-- [sim-dashboard](../simulation-dashboard)
-- [sim-server](../simulationserver)
-
-### 🕶 Visualization
-AR/VR and visual analytics modules for immersive digital twins.
-- [viz-exadigitUE5](../exadigitue5)
-- [viz-omniverse](../exadigit-ov)
-- [viz-datacenterexplorer-ue-plugin](../DatacenterExplorer)
-
-### 🔧 Tools
-- [tools-atlas-system-configurator](../atlas)
-- [tools-avp-configurator](../avp-configurator)
-- [tools-usd-datacenter-builder](../usddcbuilder)
+exadigit is an open, modular ecosystem for modeling, simulating, and visualizing large-scale supercomputing facilities.
 
 ---
 
-## 🧩 Overview
+## structure
 
-ExaDigiT integrates real telemetry data, simulation models, and visualization tools to enable:
-- Energy-efficient supercomputer operation
-- Predictive maintenance
-- AR/VR-enabled exploration of power, cooling, and workloads
+### 🧊 cooling
+modelica-based and csm-driven models for facility-level thermal management.
+- [cooling-autocsm](https://code.ornl.gov/exadigit/autocsm)
+- [cooling-frontier](https://code.ornl.gov/exadigit/datacentercoolingmodel)
+- [cooling-power9-csm](https://code.ornl.gov/exadigit/power9csm)
+- [cooling-fmu-library](https://code.ornl.gov/exadigit/fmu-models)
+- [cooling-summit-archive](https://code.ornl.gov/exadigit/summitcoolingmodel)
 
-For more information, contact: **Wes Brewer (ORNL)** or visit [code.ornl.gov/exadigit](https://code.ornl.gov/exadigit).
+### ⚙️ simulation
+raps-based workload and power modeling tools.
+- [sim-raps](https://code.ornl.gov/exadigit/raps)
+- [sim-dashboard](https://code.ornl.gov/exadigit/simulation-dashboard)
+- [sim-server](https://code.ornl.gov/exadigit/simulationserver)
+
+### 🕶 visualization
+ar/vr and visual analytics modules for immersive digital twins.
+- [viz-exadigitue5](https://code.ornl.gov/exadigit/exadigitue5)
+- [viz-omniverse](https://code.ornl.gov/exadigit/exadigit-ov)
+- [viz-datacenterexplorer-ue-plugin](https://code.ornl.gov/exadigit/datacenterexplorer)
+
+### 🔧 tools
+- [tools-atlas-system-configurator](https://code.ornl.gov/exadigit/atlas)
+- [tools-avp-configurator](https://code.ornl.gov/exadigit/avp-configurator)
+- [tools-usd-datacenter-builder](https://code.ornl.gov/exadigit/usddcbuilder)
+
+---
+
+## 🧩 overview
+
+exadigit integrates real telemetry data, simulation models, and visualization tools to enable:
+- energy-efficient supercomputer operation
+- predictive maintenance
+- ar/vr-enabled exploration of power, cooling, and workloads
+
+for more information, contact: **Wes Brewer** at [brewerwh@ornl.gov](mailto:brewerwh@ornl.gov)
 
 -----------------------------------------
 
