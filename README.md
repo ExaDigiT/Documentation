@@ -4,31 +4,32 @@ ExaDigiT is an open, modular ecosystem for modeling, simulating, and visualizing
 
 ---
 
-## 🔧 Structure
+## Structure
 
 ### 🧊 Cooling
 Modelica-based and CSM-driven models for facility-level thermal management.
-- [cooling-autocsm](../Cooling/cooling-autocsm)
-- [cooling-datacenter-frontier](../Cooling/cooling-datacenter-frontier)
-- [cooling-datacenter-summit](../Cooling/cooling-datacenter-summit)
-- [cooling-fmu-library](../Cooling/cooling-fmu-library)
-- [cooling-csm-power9](../Cooling/cooling-csm-power9)
+- [cooling-autocsm](../AutoCSM)
+- [cooling-frontier](../datacenterCoolingModel)
+- [cooling-power9-csm](../POWER9CSM)
+- [cooling-fmu-library](../fmu-models)
+- [cooling-summit-archive](../summitcoolingmodel)
 
 ### ⚙️ Simulation
 RAPS-based workload and power modeling tools.
-- [sim-raps](../Simulation/sim-raps)
-- [sim-dashboard](../Simulation/sim-dashboard)
-- [sim-server](../Simulation/sim-server)
+- [sim-raps](../raps)
+- [sim-dashboard](../simulation-dashboard)
+- [sim-server](../simulationserver)
 
 ### 🕶 Visualization
 AR/VR and visual analytics modules for immersive digital twins.
-- [viz-ue5-digitaltwin](../Visualization/viz-ue5-digitaltwin)
-- [viz-omniverse](../Visualization/viz-omniverse)
-- [viz-avp-configurator](../Visualization/viz-avp-configurator)
-- [viz-usd-datacenterbuilder](../Visualization/viz-usd-datacenterbuilder)
+- [viz-exadigitUE5](../exadigitue5)
+- [viz-omniverse](../exadigit-ov)
+- [viz-datacenterexplorer-ue-plugin](../DatacenterExplorer)
 
-### 📘 Documentation
-- [docs-exadigit](../Documentation/docs-exadigit)
+### 🔧 Tools
+- [tools-atlas-system-configurator](../atlas)
+- [tools-avp-configurator](../avp-configurator)
+- [tools-usd-datacenter-builder](../usddcbuilder)
 
 ---
 
