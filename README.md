@@ -35,16 +35,16 @@ ar/vr and visual analytics modules for immersive digital twins.
 
 ## 🧩 overview
 
-exadigit integrates real telemetry data, simulation models, and visualization tools to enable:
+ExaDigiT integrates real telemetry data, simulation models, and visualization tools to enable:
 - energy-efficient supercomputer operation
 - predictive maintenance
 - ar/vr-enabled exploration of power, cooling, and workloads
 
-for more information, contact: **Wes Brewer** at [brewerwh@ornl.gov](mailto:brewerwh@ornl.gov)
+For more information, contact: **Wes Brewer** at [brewerwh@ornl.gov](mailto:brewerwh@ornl.gov)
 
 -----------------------------------------
 
-# Documentation
+# Instructions for building documentation
 
 This is the ExaDigiT documentation source. The documentation is deployed at
 [https://exadigit.readthedocs.io/](https://exadigit.readthedocs.io/).
