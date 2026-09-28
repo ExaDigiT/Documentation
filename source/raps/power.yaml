@@ -1,0 +1,17 @@
+power:
+  power_gpu_idle: 88
+  power_gpu_max: 560
+  power_cpu_idle: 90
+  power_cpu_max: 280
+  power_mem: 74.26
+  power_nic: 20
+  power_nvme: 30
+  power_switch: 250
+  power_cdu: 8473.47
+  power_update_freq: 15
+  rectifier_peak_threshold: 13670
+  sivoc_loss_constant: 13
+  sivoc_efficiency: 0.98
+  rectifier_loss_constant: 17
+  rectifier_efficiency: 0.96
+  power_cost: 0.094

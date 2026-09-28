@@ -1,0 +1,5 @@
+network:
+  topology: fat-tree      # capacity | fat-tree | dragonfly | torus3d
+  network_max_bw: 12.5e9  # link bandwidth
+  latency: 1
+  fattree_k: 32

@@ -1,38 +1,63 @@
-usage: main.py [-h] [-c] [--start START] [--end END] [-d] [-e] [-n NUMJOBS] [-t TIME] [-v]
-[--seed] [-f REPLAY [REPLAY ...]] [--reschedule] [--scale SCALE] [-u] [--jid JID] [--validate]
-[-o] [-p {power,loss,pue,temp,util} [{power,loss,pue,temp,util} ...]] [--imtype {png,svg,jpg,pdf,eps}]
-[--system SYSTEM] [-s {fcfs,sjf,prq}] [-w {random,benchmark,peak,idle}] [--layout {layout1,layout2}]
+usage: raps [-h] {run,run-parts,show,workload,telemetry,download,train-rl,shell-completion} ...
 
-Resource Allocator & Power Simulator (RAPS)
+ExaDigiT Resource Allocator & Power Simulator (RAPS)
 
-options:
-  -h, --help            show this help message and exit
-  -c, --cooling         Include FMU cooling model
-  --start START         ISO8061 string for start of simulation
-  --end END             ISO8061 string for end of simulation
-  -d, --debug           Enable debug mode and disable rich layout
-  -e, --encrypt         Encrypt any sensitive data in telemetry
-  -n NUMJOBS, --numjobs NUMJOBS
-                        Number of jobs to schedule
-  -t TIME, --time TIME  Length of time to simulate, e.g., 123, 123s, 27m, 3h, 7d
-  -v, --verbose         Enable verbose output
-  --seed                Set random number seed for deterministic simulation
-  -f REPLAY [REPLAY ...], --replay REPLAY [REPLAY ...]
-                        Either: path/to/joblive path/to/jobprofile -or- filename.npz (overrides --workload option)
-  --reschedule          Reschedule the telemetry workload
-  --scale SCALE         Scale telemetry to fit on target machine
-  -u, --uncertainties   Change from floating point units to floating point units with uncertainties. Very expensive w.r.t simulation time!
-  --jid JID             Replay job id
-  --validate            Use node power instead of CPU/GPU utilizations
-  -o, --output          Output power, cooling, and loss models for later analysis
-  -p {power,loss,pue,temp,util} [{power,loss,pue,temp,util} ...], --plot {power,loss,pue,temp,util} [{power,loss,pue,temp,util} ...]
-                        Specify one or more types of plots to generate: power, loss, pue, util, temp
-  --imtype {png,svg,jpg,pdf,eps}
-                        Plot image type
-  --system SYSTEM       System config to use
-  -s {fcfs,sjf,prq}, --schedule {fcfs,sjf,prq}
-                        Schedule policy to use
-  -w {random,benchmark,peak,idle}, --workload {random,benchmark,peak,idle}
-                        Type of synthetic workload
-  --layout {layout1,layout2}
-                        Layout of UI
+subcommands:
+  run                Run a single-partition (homogeneous) system: synthetic workload or
+                     telemetry replay, power model, optional cooling and network models
+  run-parts          Run a multi-partition (heterogeneous) system
+  show               Print the given CLI arguments as a YAML sim config
+  workload           Generate a workload and save it as an .npz snapshot
+  telemetry          Analyze a telemetry dataset (e.g. average job arrival time)
+  download           Download telemetry data for a system
+  train-rl           Train a reinforcement learning scheduler
+  shell-completion   Register shell tab completion
+
+Selected options of "raps run" (see "raps run -h" for the complete list):
+
+  config_file           YAML sim config file, can be used instead of CLI flags. "-" reads stdin
+  -c, --cooling         Include the FMU cooling model
+  --net, --simulate-network
+                        Include the network model
+  --weather             Include weather in the cooling model (default: on for replay with cooling)
+  --start, --end        Start / end of the simulation (ISO 8601); give either --end or --time
+  -t, --time            Length of simulation: 123, 27m, 3h, 7d (default 1h)
+  --ff, --fastforward   Skip this amount of time from the start of the dataset
+  --time-delta          Step size of the power simulation (default 1s)
+  --time-unit           Base tick of the job scheduler (default 1s)
+  -n, --numjobs         Number of jobs for synthetic workloads (default 100)
+  --seed                RNG seed for deterministic simulation
+  -o, --output          Output directory (default raps-output-<id>); "none" disables output
+  -p, --plot            power, loss, pue, temp, util, net
+  --imtype              png, svg, jpg, pdf, eps
+  -d, --debug           Debug mode, disables the rich layout
+  --noui                Run without the UI
+  -v, --verbose         Verbose output
+  --layout              layout1, layout2 (layout2 is used automatically with cooling)
+  -f, --replay          joblive,jobprofile directories, dataset file, or .npz snapshot
+  --dataloader          Python module to use as a custom dataloader
+  --power-scope         chip (CPU/GPU utilization, default) or node (node power)
+  --jid                 Replay a single job id
+  --scale               Scale replayed jobs to a smaller system (max nodes per job)
+  --encrypt             Encrypt sensitive telemetry
+  -w, --workload        random, benchmark, peak, idle, synthetic, multitenant, replay,
+                        randomAI, network_test, inter_job_congestion, calculon, hpl
+  --jobsize-*, --walltime-*, --cpuutil-*, --gpuutil-*
+                        Distribution (uniform, weibull, normal) and parameters for synthetic jobs
+  --multimodal          Mixture weights across the listed distributions
+  --scheduler           default, experimental, fastsim, multitenant, scheduleflow
+  --policy              replay, fcfs, priority, sjf, ljf (plus scheduler specific policies)
+  --backfill            firstfit, bestfit, greedy, easy, conservative
+  --arrival             prescribed (original submit times) or poisson
+  --job-arrival-time    Poisson mean inter-arrival time in seconds
+  --job-arrival-rate    Scale the Poisson rate
+  --continuous-job-generation, --maxqueue
+                        Keep generating jobs so the queue never runs dry
+  --downtime-first, --downtime-interval, --downtime-length
+                        Schedule periodic system downtimes
+  --accounts, --accounts-json
+                        Track per-account statistics / load accounts from a previous run
+  --filter              Job filter expression, e.g. "traffic > 1e8"
+  --system              Built-in system name or path to a system YAML file
+  --system.base, --system.<section>.<field>
+                        Inherit from another system and override individual fields

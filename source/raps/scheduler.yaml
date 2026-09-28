@@ -1,0 +1,14 @@
+scheduler:
+  job_arrival_time: 100
+  mtbf: 11
+  trace_quanta: 15
+  min_wall_time: 60
+  max_wall_time: 43200
+  ui_update_freq: 900
+  max_nodes_per_job: 3000
+  job_end_probs:
+    COMPLETED: 0.63
+    FAILED: 0.13
+    CANCELLED: 0.12
+    TIMEOUT: 0.11
+    NODE_FAIL: 0.01

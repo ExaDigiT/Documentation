@@ -1,0 +1,19 @@
+# config/mysystem.yaml : the naive supercomputer from the exploded view
+system:
+  num_cdus: 1
+  racks_per_cdu: 2
+  nodes_per_rack: 12
+  chassis_per_rack: 3
+  nodes_per_blade: 2
+  switches_per_chassis: 2
+  nics_per_node: 1
+  rectifiers_per_chassis: 2
+  nodes_per_rectifier: 2
+  missing_racks: []
+  down_nodes: []
+  cpus_per_node: 1
+  gpus_per_node: 2
+  cpu_peak_flops: 2048.0e9
+  gpu_peak_flops: 52.0e12
+  cpu_fp_ratio: 0.667
+  gpu_fp_ratio: 0.667
