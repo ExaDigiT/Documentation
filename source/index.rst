@@ -33,10 +33,9 @@ ExaDigiT architecture overview:
 ExaDigiT uses four primary components:
 ---------------------------------------
 
+    - **RAPS**: Resource Allocator and Power Simulator (https://code.ornl.gov/exadigit/raps, https://github.com/ExaDigiT/RAPS) to schedule workloads or replay telemetry, and to model energy usage, energy conversion losses and network congestion.
 
-    - **RAPS**: Resource Allocator and Power Simulator (https://code.ornl.gov/exadigit/raps) to model workloads, energy usage, and energy conversion losses.
-
-    - **Cooling Model with Modelica FMU** (AutoCSM https://code.ornl.gov/exadigit/AutoCSM, LBNL https://github.com/lbl-srg/modelica-buildingsL, TRANSFORM https://github.com/ORNL-Modelica/TRANSFORM-Library) transient thermo-fluid simulation to model the cooling system from the cooling tower to the cold plate.
+    - **Cooling Model with Modelica FMU** (AutoCSM https://code.ornl.gov/exadigit/AutoCSM, POWER9CSM https://code.ornl.gov/exadigit/POWER9CSM, LBNL Buildings https://github.com/lbl-srg/modelica-buildings, TRANSFORM https://github.com/ORNL-Modelica/TRANSFORM-Library) transient thermo-fluid simulation to model the cooling system from the cooling tower to the cold plate.
 
     - A network digital twin to simulate network power and congestion.
 
@@ -44,23 +43,17 @@ ExaDigiT uses four primary components:
 
 
 
-The schema above shows the architectural overview of the various components of ExaDigiT. There are three main modules that
-we develop:  RAPS,  a cooling model, and  visual
-analytics capabilities. The RAPS module can replay workloads
-from telemetry, reschedule them, or simulate synthetic work-
-loads on the supercomputer to analyze the resulting energy
-consumption; further details are provided in Section III-B. The
-cooling model simulates thermo-fluid dynamics and control
-of the Central Energy Plant (CEP), which itself includes
-three components:  a thermo-fluid model for predicting
-temperatures (T ), pressures (Π), and flow rates (Q);  a
-control system model for predicting the staging of cooling
-towers, hot/cold water pumps, and heat exchangers; and 
-a sub-module for predicting the system PUE. Both RAPS and
-the cooling model can be interfaced either via a terminal
-console, the web-based dashboard, or the ExadigitUE5 augmented reality
+The schema above shows the architectural overview of the various components of ExaDigiT.
+The RAPS module can replay workloads from telemetry, reschedule them, or simulate synthetic
+workloads on the supercomputer to analyze the resulting energy consumption. The cooling model
+simulates thermo-fluid dynamics and control of the Central Energy Plant (CEP), which itself
+includes three components: a thermo-fluid model for predicting temperatures, pressures and
+flow rates; a control system model for predicting the staging of cooling towers, hot/cold
+water pumps, and heat exchangers; and a sub-module for predicting the system PUE. RAPS
+provides the CDU-level heat load to the cooling model and reports the results back, either in
+a terminal console, the web-based dashboard, or the ExaDigiTUE5 augmented reality
 environment for visual insights.
-         
+
 .. toctree::
    :maxdepth: 1
    :hidden:
