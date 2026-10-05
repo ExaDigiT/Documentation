@@ -11,7 +11,7 @@ RAPS requires Python 3.12 or newer.
 
 .. code-block:: shell-session
 
-   $ git clone https://code.ornl.gov/exadigit/raps
+   $ git clone https://github.com/ExaDigiT/RAPS
    $ cd raps
    $ pip install -e .
 
@@ -197,7 +197,7 @@ MIT Supercloud and Philly are multi-partition systems with their own data toolin
 Cooling model
 -------------
 
-RAPS passes CDU-level power to a Functional Mock-up Unit (FMU) of the cooling plant and reports temperatures, flow rates, pressures and PUE. Example FMUs come from https://code.ornl.gov/exadigit/POWER9CSM:
+RAPS passes CDU-level power to a Functional Mock-up Unit (FMU) of the cooling plant and reports temperatures, flow rates, pressures and PUE. Example FMUs come from https://github.com/ExaDigiT/POWER9CSM:
 
 .. code-block:: shell-session
 
@@ -421,7 +421,7 @@ Running the tests
 Other components
 ----------------
 
-A simulation server and a web dashboard for RAPS are available at https://code.ornl.gov/exadigit/simulationserver and https://code.ornl.gov/exadigit/simulation-dashboard. A Docker image is built with ``make docker_build && make docker_run``.
+A simulation server and a web dashboard for RAPS are available at https://github.com/ExaDigiT/SimulationServer and https://github.com/ExaDigiT/SimulationDashboard. A Docker image is built with ``make docker_build && make docker_run``.
 
 Citation
 --------

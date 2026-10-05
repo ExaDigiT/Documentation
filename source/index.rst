@@ -33,13 +33,13 @@ ExaDigiT architecture overview:
 ExaDigiT uses four primary components:
 ---------------------------------------
 
-    - **RAPS**: Resource Allocator and Power Simulator (https://code.ornl.gov/exadigit/raps, https://github.com/ExaDigiT/RAPS) to schedule workloads or replay telemetry, and to model energy usage, energy conversion losses and network congestion.
+    - **RAPS**: Resource Allocator and Power Simulator (https://github.com/ExaDigiT/RAPS) to schedule workloads or replay telemetry, and to model energy usage, energy conversion losses and network congestion.
 
-    - **Cooling Model with Modelica FMU** (AutoCSM https://code.ornl.gov/exadigit/AutoCSM, POWER9CSM https://code.ornl.gov/exadigit/POWER9CSM, LBNL Buildings https://github.com/lbl-srg/modelica-buildings, TRANSFORM https://github.com/ORNL-Modelica/TRANSFORM-Library) transient thermo-fluid simulation to model the cooling system from the cooling tower to the cold plate.
+    - **Cooling Model with Modelica FMU** (AutoCSM https://github.com/ExaDigiT/AutoCSM, POWER9CSM https://github.com/ExaDigiT/POWER9CSM, LBNL Buildings https://github.com/lbl-srg/modelica-buildings, TRANSFORM https://github.com/ORNL-Modelica/TRANSFORM-Library) transient thermo-fluid simulation to model the cooling system from the cooling tower to the cold plate.
 
     - A network digital twin to simulate network power and congestion.
 
-    - **ExaDigiTUE5**: A visual analytics module (https://code.ornl.gov/exadigit/exadigitue5) using Unreal Engine 5 for augmented reality and a web-based dashboard for experiments.
+    - **ExaDigiTUE5**: A visual analytics module (https://github.com/ExaDigiT/exadigitue5) using Unreal Engine 5 for augmented reality and a web-based dashboard for experiments.
 
 
 

@@ -14,28 +14,24 @@ For more information, contact: **Wes Brewer** at [brewerwh@ornl.gov](mailto:brew
 
 ### 🧊 cooling
 modelica-based and csm-driven models for facility-level thermal management.
-- [cooling-autocsm](https://code.ornl.gov/exadigit/autocsm)
-- [cooling-frontier](https://code.ornl.gov/exadigit/datacentercoolingmodel)
-- [cooling-power9-csm](https://code.ornl.gov/exadigit/power9csm)
-- [cooling-fmu-library](https://code.ornl.gov/exadigit/fmu-models)
-- [cooling-summit-archive](https://code.ornl.gov/exadigit/summitcoolingmodel)
+- [cooling-autocsm](https://github.com/ExaDigiT/AutoCSM)
+- [cooling-frontier](https://github.com/ExaDigiT/datacenterCoolingModel)
+- [cooling-power9-csm](https://github.com/ExaDigiT/POWER9CSM)
 
 ### ⚙️ simulation
 raps-based workload and power modeling tools.
-- [sim-raps](https://code.ornl.gov/exadigit/raps)
-- [sim-dashboard](https://code.ornl.gov/exadigit/simulation-dashboard)
-- [sim-server](https://code.ornl.gov/exadigit/simulationserver)
+- [sim-raps](https://github.com/ExaDigiT/RAPS)
+- [sim-dashboard](https://github.com/ExaDigiT/SimulationDashboard)
+- [sim-server](https://github.com/ExaDigiT/SimulationServer)
 
 ### 🕶 visualization
 ar/vr and visual analytics modules for immersive digital twins.
-- [viz-exadigitue5](https://code.ornl.gov/exadigit/exadigitue5)
-- [viz-omniverse](https://code.ornl.gov/exadigit/exadigit-ov)
-- [viz-datacenterexplorer-ue-plugin](https://code.ornl.gov/exadigit/datacenterexplorer)
+- [viz-exadigitue5](https://github.com/ExaDigiT/exadigitue5)
+- [viz-omniverse](https://github.com/ExaDigiT/exadigit-ov)
+- [viz-datacenterexplorer-ue-plugin](https://github.com/ExaDigiT/DatacenterExplorer)
 
 ### 🔧 tools
-- [tools-atlas-system-configurator](https://code.ornl.gov/exadigit/atlas)
-- [tools-avp-configurator](https://code.ornl.gov/exadigit/avp-configurator)
-- [tools-usd-datacenter-builder](https://code.ornl.gov/exadigit/usddcbuilder)
+- [tools-usd-datacenter-builder](https://github.com/ExaDigiT/usd-dc-builder)
 
 -----------------------------------------
 

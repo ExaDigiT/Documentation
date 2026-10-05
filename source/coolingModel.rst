@@ -12,8 +12,8 @@ Functional Mock-up Unit (FMU) from templated models, driven by a JSON input spec
 FMU can be run standalone, with default values or time-series inputs, or coupled to RAPS, which supplies the
 heat load of each CDU at every time step (see `Use with RAPS`_).
 
-The example models live in the POWER9CSM repository (https://code.ornl.gov/exadigit/POWER9CSM), which uses the
-AutoCSM framework (https://code.ornl.gov/exadigit/AutoCSM) and the TRANSFORM library.
+The example models live in the POWER9CSM repository (https://github.com/ExaDigiT/POWER9CSM), which uses the
+AutoCSM framework (https://github.com/ExaDigiT/AutoCSM) and the TRANSFORM library.
 
 Prerequisites
 -------------
@@ -23,14 +23,14 @@ Prerequisites
 - Modelica libraries, included as git submodules of POWER9CSM:
 
   - ORNL `TRANSFORM Library <https://github.com/ORNL-Modelica/TRANSFORM-Library>`_
-  - ORNL `AutoCSM <https://code.ornl.gov/exadigit/AutoCSM>`_
+  - ORNL `AutoCSM <https://github.com/ExaDigiT/AutoCSM>`_
 
 Installation
 ------------
 
 .. code-block:: shell-session
 
-   $ git clone --recurse-submodules https://code.ornl.gov/exadigit/POWER9CSM
+   $ git clone --recurse-submodules https://github.com/ExaDigiT/POWER9CSM
    $ cd POWER9CSM
 
 The submodules may need to be switched from https to ssh URLs depending on your access.

@@ -8,7 +8,7 @@ The digital twin provides data ingestion from telemetry, as well as triggering
 and interacting with simulations developed for the wider ExaDigiT project at
 ORNL, as well as for the LUMI system at CSC and other CrayEX Supercomputers.
 For the overarching project, see ExaDigiT at https://exadigit.github.io,
-with the code repositories at https://code.ornl.gov/exadigit.
+with the code repositories at https://github.com/ExaDigiT.
 
 
 Installation
@@ -19,7 +19,7 @@ To be part of the EpicGames Organization and have access to https://github.com/E
 
 
 
-git clone --recurse-submodules https://code.ornl.gov/exadigit/exadigitue5.git
+git clone --recurse-submodules https://github.com/ExaDigiT/exadigitue5.git
 
 For UEFMI, which is a plugin to the project follow the installation guide at
 https://github.com/ORNL-Modelica/UnrealEngine-FMIPlugin
